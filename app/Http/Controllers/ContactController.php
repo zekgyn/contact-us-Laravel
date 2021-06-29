@@ -31,7 +31,7 @@ class ContactController extends Controller
         'form_message' => $request->get('message'),
     ), function($message) use ($request){
         $message->from($request->email);
-        $message->to('assjmyunusu@gmail.com', 'Hello Admin')->subject($request->get('subject'));
+        $message->to('enter an email', 'Hello Admin')->subject($request->get('subject'));
     });
 
     return back()->with('success', 'Thanks for contacting us.');
